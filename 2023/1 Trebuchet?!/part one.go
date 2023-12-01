@@ -39,14 +39,14 @@ func main() {
 		numberInLine = append(numberInLine, number)
 	}
 
-	fmt.Println(numberInLine)
-
 	var sum int
 	for _, number := range numberInLine {
 		sum += number
 	}
 
-	fmt.Println(sum)
+	//put the result in a phrase
+	fmt.Println("the result is : " + strconv.Itoa(sum))
+
 }
 
 func getNumberInLine(numberInLineAsString string) []int {
