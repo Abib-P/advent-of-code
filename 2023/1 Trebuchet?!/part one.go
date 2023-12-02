@@ -12,7 +12,6 @@ func main() {
 		return
 	}
 
-	// met chaque ligne du fichier dans un tableau
 	var lines []string
 	var line string
 
@@ -30,7 +29,6 @@ func main() {
 	for _, line := range lines {
 		var d = getNumberInLine(line)
 		var number int
-		// only first and last number are important, if only one number, use it twice
 		if len(d) == 1 {
 			number = 10*d[0] + d[0]
 		} else {
@@ -44,7 +42,6 @@ func main() {
 		sum += number
 	}
 
-	//put the result in a phrase
 	fmt.Println("the result is : " + strconv.Itoa(sum))
 
 }
