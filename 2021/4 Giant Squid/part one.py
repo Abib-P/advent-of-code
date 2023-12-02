@@ -22,27 +22,28 @@ class Number_in_board:
         if self.has_been_drawn:
             return bcolors.OKGREEN + str(self.number) + bcolors.ENDC
         return bcolors.WARNING + str(self.number) + bcolors.ENDC
+
     def __repr__(self):
         if self.has_been_drawn:
             return bcolors.OKGREEN + str(self.number) + bcolors.ENDC
         return bcolors.WARNING + str(self.number) + bcolors.ENDC
-        
+
 
 class Board:
     def __init__(self):
         self.matrix = []
-    
+
     def add_row_number(self, lines):
         number_in_row = [Number_in_board(int(numbers)) for numbers in lines[0].split()]
         self.matrix.append(number_in_row)
         lines.pop(0)
-    
+
     def use_drawn_number(self, number):
-        [[ i.drawn() for i in row if i.number == number ] for row in self.matrix]
+        [[i.drawn() for i in row if i.number == number] for row in self.matrix]
 
     def total_undraw(self):
         result = []
-        [[ result.append(i.number) for i in row if i.has_been_drawn == False ] for row in self.matrix]
+        [[result.append(i.number) for i in row if i.has_been_drawn == False] for row in self.matrix]
         return sum(result)
 
     def has_won(self):
@@ -54,16 +55,17 @@ class Board:
                     has_won_row = False
                 if self.matrix[j][i].has_been_drawn == False:
                     has_won_column = False
-                
+
             if has_won_row:
                 return True
             if has_won_column:
                 return True
-        
+
         return False
 
     def __str__(self):
         return str(self.matrix)
+
     def __repr__(self):
         return str(self.matrix)
 
@@ -79,20 +81,21 @@ class Bingo:
 
     def use_drawn_number(self, number):
         [board.use_drawn_number(number) for board in self.boards]
-    
+
     def board_has_won(self):
         won_board = [board for board in self.boards if board.has_won()]
         return len(won_board) > 0
 
     def calculate_result(self, number):
         won_board = [board for board in self.boards if board.has_won()]
-        return won_board[0].total_undraw()*number
+        return won_board[0].total_undraw() * number
 
     def __str__(self):
         return str(self.boards)
+
     def __repr__(self):
         return str(self.boards)
-        
+
 
 def create_bingo(lines):
     bingo_game = Bingo()
@@ -100,7 +103,7 @@ def create_bingo(lines):
         lines.pop(0)
         bingo_game.add_boards(lines)
     return bingo_game
-        
+
 
 if __name__ == '__main__':
     input_file = open('input.txt', 'r')
@@ -116,5 +119,5 @@ if __name__ == '__main__':
         last_drawn_number = drawn_numbers[0]
         bingo.use_drawn_number(last_drawn_number)
         drawn_numbers.pop(0)
-    
+
     print("the result is " + str(bingo.calculate_result(last_drawn_number)))

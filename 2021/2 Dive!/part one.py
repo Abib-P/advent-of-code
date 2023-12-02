@@ -13,6 +13,5 @@ for line in lines:
             depth -= int(words[1])
         case "down":
             depth += int(words[1])
-    
 
 print("result is " + str(depth * horizontal))

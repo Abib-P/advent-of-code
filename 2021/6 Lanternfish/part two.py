@@ -1,5 +1,6 @@
 import time
 
+
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -37,7 +38,6 @@ class Lanternfish:
         for i in range(len(self.lanternfish)):
             result += self.lanternfish[i]
         return result
-
 
     def __str__(self):
         return str(self.lanternfish)
