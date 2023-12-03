@@ -94,7 +94,7 @@ func main() {
 			games = append(games, game)
 		}
 	}
-	//sum of all ids
+
 	var sum int
 	for _, game := range games {
 		sum += game.id
