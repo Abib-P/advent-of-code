@@ -27,8 +27,8 @@ func main() {
 
 	var winningNumbers []int
 	var lineResult int
-	var finalResult int
-	for _, line := range lines {
+	var winningLines []int
+	for actualLine, line := range lines {
 		line = line[strings.IndexByte(line, ':')+1:]
 		winningNumbersString := line[:strings.IndexByte(line, '|')]
 		line = line[strings.IndexByte(line, '|')+1:]
@@ -58,20 +58,32 @@ func main() {
 				number, _ := strconv.Atoi(numberAsString)
 				for _, winningNumber := range winningNumbers {
 					if number == winningNumber {
-						if lineResult == 0 {
-							lineResult++
-						} else {
-							lineResult *= 2
-						}
+						lineResult++
 					}
 				}
 			}
+
 		}
-		finalResult += lineResult
-		winningNumbers = nil
+		for i := 0; i < lineResult; i++ {
+			winningLines = append(winningLines, actualLine+i+2)
+		}
+		for _, cardNumber := range winningLines {
+			if cardNumber == actualLine+1 {
+				for i := 0; i < lineResult; i++ {
+					winningLines = append(winningLines, actualLine+i+2)
+				}
+			}
+		}
+		winningLines = append(winningLines, actualLine+1)
+
 		lineResult = 0
+		winningNumbers = nil
 	}
-	fmt.Println(finalResult)
+	var result int
+	for range winningLines {
+		result++
+	}
+	fmt.Println(result)
 }
 
 func cleanString(s string) string {
