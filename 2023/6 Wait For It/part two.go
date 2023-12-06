@@ -35,10 +35,6 @@ func main() {
 	for _, line := range lines[0] {
 		if line >= '0' && line <= '9' {
 			actualNumber += string(line)
-		} else if actualNumber != "" {
-			number, _ := strconv.Atoi(actualNumber)
-			times = append(times, number)
-			actualNumber = ""
 		}
 	}
 	if actualNumber != "" {
@@ -52,12 +48,9 @@ func main() {
 	for _, line := range lines[1] {
 		if line >= '0' && line <= '9' {
 			actualNumber += string(line)
-		} else if actualNumber != "" {
-			number, _ := strconv.Atoi(actualNumber)
-			distances = append(distances, number)
-			actualNumber = ""
 		}
 	}
+
 	if actualNumber != "" {
 		number, _ := strconv.Atoi(actualNumber)
 		distances = append(distances, number)
@@ -68,6 +61,8 @@ func main() {
 	for i := 0; i < len(times); i++ {
 		boats = append(boats, boat{times[i], distances[i]})
 	}
+
+	fmt.Println(boats)
 
 	var numberOfPossibleBoats []int
 	for _, boat := range boats {
@@ -86,7 +81,7 @@ func main() {
 		finalResult *= numberOfPossibleBoat
 	}
 
-	println(finalResult)
+	fmt.Println(finalResult)
 }
 
 func isEven(possibilities int) bool {
