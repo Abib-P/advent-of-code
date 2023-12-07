@@ -85,10 +85,8 @@ func main() {
 }
 
 func calculateType(hand string) int {
-	//calculate type that depend on the number of pairs
 	var numberOfEachCard [13]int
 	for _, card := range hand {
-		//use strings.IndexByte
 		numberOfEachCard[strings.IndexByte(listCard, byte(card))]++
 	}
 	var numberOfPairs int
