@@ -7,11 +7,6 @@ import (
 	"strings"
 )
 
-type boat struct {
-	Time     int
-	Distance int
-}
-
 type hand struct {
 	Id   int
 	Hand string
