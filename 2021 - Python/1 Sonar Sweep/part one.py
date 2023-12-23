@@ -1,15 +1,16 @@
-input_file = open('input.txt', 'r')
-lines = input_file.readlines()
-
-count = 0
-last_number = None
-
-for line in lines:
-    if last_number == None:
+def sonar_sweep_part_one():
+    input_file = open('input.txt', 'r')
+    lines = input_file.readlines()
+    count = 0
+    last_number = None
+    for line in lines:
+        if last_number == None:
+            last_number = int(line)
+            continue
+        if last_number < int(line):
+            count += 1
         last_number = int(line)
-        continue
-    if last_number < int(line):
-        count += 1
-    last_number = int(line)
+    print("result is " + str(count))
 
-print("result is " + str(count))
+
+sonar_sweep_part_one()

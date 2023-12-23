@@ -1,4 +1,4 @@
-def sonar_sweep():
+def sonar_sweep_part_two():
     input_file = open('input.txt', 'r')
     lines = input_file.readlines()
     count = 0
@@ -15,4 +15,4 @@ def sonar_sweep():
     print("result is " + str(count))
 
 
-sonar_sweep()
+sonar_sweep_part_two()
