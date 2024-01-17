@@ -53,3 +53,6 @@ def lanternfish_part_one():
     for i in range(80):
         lanternfish.play_day()
     print("the result is " + str(lanternfish.get_number_of_fish()))
+
+
+lanternfish_part_one()

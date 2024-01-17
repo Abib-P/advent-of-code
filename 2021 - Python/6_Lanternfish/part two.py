@@ -46,7 +46,7 @@ class Lanternfish:
         return str(self.lanternfish)
 
 
-if __name__ == '__main__':
+def lanternfish_part_two():
     input_file = open('input.txt', 'r')
     file_lines = input_file.readlines()
 
@@ -61,3 +61,6 @@ if __name__ == '__main__':
 
     # total time taken
     print("Runtime of the program is %lf" % (end - start))
+
+
+lanternfish_part_two()
