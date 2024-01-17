@@ -100,7 +100,7 @@ def parse_one_line(line: str):
     return Line.from_str(line)
 
 
-if __name__ == '__main__':
+def hydrothermal_venture_part_two():
     input_file = open('input.txt', 'r')
     file_lines = input_file.readlines()
 
@@ -115,3 +115,6 @@ if __name__ == '__main__':
     number_of_overlap = len(reduce(list.__add__, points))
 
     print("the result is " + str(number_of_overlap))
+
+
+hydrothermal_venture_part_two()
