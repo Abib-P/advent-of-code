@@ -44,7 +44,7 @@ class Lanternfish:
         return str(self.lanternfish)
 
 
-if __name__ == '__main__':
+def lanternfish_part_one():
     input_file = open('input.txt', 'r')
     file_lines = input_file.readlines()
 
