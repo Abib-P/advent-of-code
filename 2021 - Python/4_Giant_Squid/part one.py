@@ -1,4 +1,4 @@
-class bcolors:
+class Bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
@@ -20,13 +20,13 @@ class Number_in_board:
 
     def __str__(self):
         if self.has_been_drawn:
-            return bcolors.OKGREEN + str(self.number) + bcolors.ENDC
-        return bcolors.WARNING + str(self.number) + bcolors.ENDC
+            return Bcolors.OKGREEN + str(self.number) + Bcolors.ENDC
+        return Bcolors.WARNING + str(self.number) + Bcolors.ENDC
 
     def __repr__(self):
         if self.has_been_drawn:
-            return bcolors.OKGREEN + str(self.number) + bcolors.ENDC
-        return bcolors.WARNING + str(self.number) + bcolors.ENDC
+            return Bcolors.OKGREEN + str(self.number) + Bcolors.ENDC
+        return Bcolors.WARNING + str(self.number) + Bcolors.ENDC
 
 
 class Board:
