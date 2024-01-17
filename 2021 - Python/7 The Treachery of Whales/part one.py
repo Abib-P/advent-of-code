@@ -29,7 +29,7 @@ def add_crab(number_of_crabs: int = 0):
     print(bcolors.OKCYAN + "A crab has been added. There are now " + str(number_of_crabs) + " crabs." + bcolors.ENDC)
 
 
-if __name__ == '__main__':
+def the_treachery_of_whales_part_one():
     input_file = open('input.txt', 'r')
     crabs_position = input_file.readlines()[0].split(",")
     number_of_crabs = len(crabs_position)
@@ -37,3 +37,6 @@ if __name__ == '__main__':
 
     crabs = Crabs()
     print(crabs)
+
+
+the_treachery_of_whales_part_one()
