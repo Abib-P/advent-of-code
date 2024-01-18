@@ -1,5 +1,5 @@
-def sonar_sweep_part_one():
-    input_file = open('input.txt', 'r')
+def part_one(file_name: str):
+    input_file = open(file_name, 'r')
     lines = input_file.readlines()
     count = 0
     last_number = None
@@ -11,6 +11,3 @@ def sonar_sweep_part_one():
             count += 1
         last_number = int(line)
     print("result is " + str(count))
-
-
-sonar_sweep_part_one()

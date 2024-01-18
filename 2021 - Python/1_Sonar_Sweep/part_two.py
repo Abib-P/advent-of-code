@@ -1,5 +1,5 @@
-def sonar_sweep_part_two():
-    input_file = open('input.txt', 'r')
+def part_two(file_name: str):
+    input_file = open(file_name, 'r')
     lines = input_file.readlines()
     count = 0
     three_last_number = []
@@ -13,6 +13,3 @@ def sonar_sweep_part_two():
         if last_sum < sum(three_last_number):
             count += 1
     print("result is " + str(count))
-
-
-sonar_sweep_part_two()
