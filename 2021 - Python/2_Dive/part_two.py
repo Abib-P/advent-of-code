@@ -1,4 +1,4 @@
-def dive_part_two():
+def part_two():
     input_file = open('input.txt', 'r')
     lines = input_file.readlines()
     aim = 0
@@ -17,4 +17,4 @@ def dive_part_two():
     print("result is " + str(depth * horizontal))
 
 
-dive_part_two()
+part_two()
