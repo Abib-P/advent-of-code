@@ -1,4 +1,4 @@
-def binary_diagnostic_part_one():
+def part_one():
     input_file = open('input.txt', 'r')
     lines = input_file.readlines()
     number_of_bit_by_line = len(lines[0]) - 1
@@ -27,4 +27,4 @@ def binary_diagnostic_part_one():
     print("result is " + str(gamma_result * epsilon_result))
 
 
-binary_diagnostic_part_one()
+part_one()

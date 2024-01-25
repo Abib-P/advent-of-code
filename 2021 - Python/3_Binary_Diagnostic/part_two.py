@@ -1,4 +1,4 @@
-def binary_diagnostic_part_two():
+def part_two():
     input_file = open('input.txt', 'r')
     oxygen_generator_rating_lines = input_file.readlines()
     CO2_scrubber_rating_lines = oxygen_generator_rating_lines
@@ -63,4 +63,4 @@ def binary_diagnostic_part_two():
     print("result is " + str(oxygen_generator_result * CO2_scrubber_result))
 
 
-binary_diagnostic_part_two()
+part_two()
