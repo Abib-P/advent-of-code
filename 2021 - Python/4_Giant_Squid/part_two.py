@@ -108,7 +108,7 @@ def create_bingo(lines):
     return bingo_game
 
 
-def giant_squid_part_two():
+def part_two():
     input_file = open('input.txt', 'r')
     lines = input_file.readlines()
 
@@ -126,4 +126,4 @@ def giant_squid_part_two():
     print("the result is " + str(bingo.calculate_result()))
 
 
-giant_squid_part_two()
+part_two()
