@@ -87,7 +87,7 @@ def parse_one_line(line: str):
     return Line.from_str(line)
 
 
-def hydrothermal_venture_part_two():
+def part_two():
     input_file = open('input.txt', 'r')
     file_lines = input_file.readlines()
 
@@ -104,4 +104,4 @@ def hydrothermal_venture_part_two():
     print("the result is " + str(number_of_overlap))
 
 
-hydrothermal_venture_part_two()
+part_two()

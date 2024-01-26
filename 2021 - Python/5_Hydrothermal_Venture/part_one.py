@@ -80,7 +80,7 @@ def is_vertical_or_horizontal(line: Line):
     return False
 
 
-def hydrothermal_venture_part_one():
+def part_one():
     input_file = open('input.txt', 'r')
     file_lines = input_file.readlines()
 
@@ -98,4 +98,4 @@ def hydrothermal_venture_part_one():
     print("the result is " + str(number_of_overlap))
 
 
-hydrothermal_venture_part_one()
+part_one()
