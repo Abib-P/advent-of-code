@@ -34,7 +34,7 @@ class Lanternfish:
         return str(self.lanternfish)
 
 
-def lanternfish_part_two():
+def part_two():
     input_file = open('input.txt', 'r')
     file_lines = input_file.readlines()
 
@@ -51,4 +51,4 @@ def lanternfish_part_two():
     print("Runtime of the program is %lf" % (end - start))
 
 
-lanternfish_part_two()
+part_two()

@@ -32,7 +32,7 @@ class Lanternfish:
         return str(self.lanternfish)
 
 
-def lanternfish_part_one():
+def part_one():
     input_file = open('input.txt', 'r')
     file_lines = input_file.readlines()
 
@@ -43,4 +43,4 @@ def lanternfish_part_one():
     print("the result is " + str(lanternfish.get_number_of_fish()))
 
 
-lanternfish_part_one()
+part_one()
