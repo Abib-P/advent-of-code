@@ -1,6 +1,7 @@
 sonar_sweep = __import__('1_Sonar_Sweep')
 dive = __import__('2_Dive')
 binary_diagnostic = __import__('3_Binary_Diagnostic')
+giant_squid = __import__('4_Giant_Squid')
 
 
 def main():
@@ -10,6 +11,9 @@ def main():
     dive.part_two()
     binary_diagnostic.part_one()
     binary_diagnostic.part_two()
+    giant_squid.part_one()
+    giant_squid.part_two()
+
 
 
 if __name__ == "__main__":
