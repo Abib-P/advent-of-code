@@ -1,5 +1,5 @@
-def part_two():
-    input_file = open('input.txt', 'r')
+def part_two(file_name: str):
+    input_file = open(file_name, 'r')
     lines = input_file.readlines()
     aim = 0
     depth = 0
@@ -15,6 +15,3 @@ def part_two():
             case "down":
                 aim += int(words[1])
     print("result is " + str(depth * horizontal))
-
-
-part_two()

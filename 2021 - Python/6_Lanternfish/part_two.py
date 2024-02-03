@@ -34,8 +34,8 @@ class Lanternfish:
         return str(self.lanternfish)
 
 
-def part_two():
-    input_file = open('input.txt', 'r')
+def part_two(file_name: str):
+    input_file = open(file_name, 'r')
     file_lines = input_file.readlines()
 
     start = time.time_ns()
@@ -49,6 +49,3 @@ def part_two():
 
     # total time taken
     print("Runtime of the program is %lf" % (end - start))
-
-
-part_two()

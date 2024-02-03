@@ -1,5 +1,5 @@
-def part_one():
-    input_file = open('input.txt', 'r')
+def part_one(file_name: str):
+    input_file = open(file_name, 'r')
     lines = input_file.readlines()
     number_of_bit_by_line = len(lines[0]) - 1
     gamma_rate = []
@@ -25,6 +25,3 @@ def part_one():
         gamma_result += gamma_rate[i] * pow(2, i)
         epsilon_result += epsilon_rate[i] * pow(2, i)
     print("result is " + str(gamma_result * epsilon_result))
-
-
-part_one()

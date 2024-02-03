@@ -29,8 +29,8 @@ def add_crab(number_of_crabs: int = 0):
     print(Bcolors.OKCYAN + "A crab has been added. There are now " + str(number_of_crabs) + " crabs." + Bcolors.ENDC)
 
 
-def part_one():
-    input_file = open('input.txt', 'r')
+def part_one(file_name: str):
+    input_file = open(file_name, 'r')
     crabs_position = input_file.readlines()[0].split(",")
     number_of_crabs = len(crabs_position)
     print(Bcolors.OKCYAN + "There are " + str(number_of_crabs) + " crabs." + Bcolors.ENDC)

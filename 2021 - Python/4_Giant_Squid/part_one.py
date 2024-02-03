@@ -105,8 +105,8 @@ def create_bingo(lines):
     return bingo_game
 
 
-def part_one():
-    input_file = open('input.txt', 'r')
+def part_one(file_name: str):
+    input_file = open(file_name, 'r')
     lines = input_file.readlines()
 
     lines[0] = lines[0][:-1]
@@ -121,6 +121,3 @@ def part_one():
         drawn_numbers.pop(0)
 
     print("the result is " + str(bingo.calculate_result(last_drawn_number)))
-
-
-part_one()

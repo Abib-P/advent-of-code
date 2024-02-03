@@ -32,8 +32,8 @@ class Lanternfish:
         return str(self.lanternfish)
 
 
-def part_one():
-    input_file = open('input.txt', 'r')
+def part_one(file_name: str):
+    input_file = open(file_name, 'r')
     file_lines = input_file.readlines()
 
     lanternfish = Lanternfish()
@@ -41,6 +41,3 @@ def part_one():
     for i in range(80):
         lanternfish.play_day()
     print("the result is " + str(lanternfish.get_number_of_fish()))
-
-
-part_one()

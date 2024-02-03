@@ -80,8 +80,8 @@ def is_vertical_or_horizontal(line: Line):
     return False
 
 
-def part_one():
-    input_file = open('input.txt', 'r')
+def part_one(file_name: str):
+    input_file = open(file_name, 'r')
     file_lines = input_file.readlines()
 
     lines = [parse_one_line(line) for line in file_lines]
@@ -96,6 +96,3 @@ def part_one():
     number_of_overlap = len(reduce(list.__add__, points))
 
     print("the result is " + str(number_of_overlap))
-
-
-part_one()

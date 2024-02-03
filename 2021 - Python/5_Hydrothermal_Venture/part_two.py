@@ -87,8 +87,8 @@ def parse_one_line(line: str):
     return Line.from_str(line)
 
 
-def part_two():
-    input_file = open('input.txt', 'r')
+def part_two(file_name: str):
+    input_file = open(file_name, 'r')
     file_lines = input_file.readlines()
 
     lines = [parse_one_line(line) for line in file_lines]
@@ -102,6 +102,3 @@ def part_two():
     number_of_overlap = len(reduce(list.__add__, points))
 
     print("the result is " + str(number_of_overlap))
-
-
-part_two()

@@ -1,5 +1,5 @@
-def part_two():
-    input_file = open('input.txt', 'r')
+def part_two(file_name: str):
+    input_file = open(file_name, 'r')
     oxygen_generator_rating_lines = input_file.readlines()
     CO2_scrubber_rating_lines = oxygen_generator_rating_lines
     number_of_bit_by_line = len(oxygen_generator_rating_lines[0]) - 1
@@ -61,6 +61,3 @@ def part_two():
         oxygen_generator_result += int(oxygen_generator_rating[i]) * pow(2, i)
         CO2_scrubber_result += int(CO2_scrubber_rating[i]) * pow(2, i)
     print("result is " + str(oxygen_generator_result * CO2_scrubber_result))
-
-
-part_two()
