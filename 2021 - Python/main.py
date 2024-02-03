@@ -9,11 +9,10 @@ def main():
     sonar_sweep.part_two("./1_Sonar_Sweep/input.txt")
     dive.part_one("./2_Dive/input.txt")
     dive.part_two("./2_Dive/input.txt")
-    binary_diagnostic.part_one()
-    binary_diagnostic.part_two()
-    giant_squid.part_one()
-    giant_squid.part_two()
-
+    binary_diagnostic.part_one("./3_Binary_Diagnostic/input.txt")
+    binary_diagnostic.part_two("./3_Binary_Diagnostic/input.txt")
+    giant_squid.part_one("./4_Giant_Squid/input.txt")
+    giant_squid.part_two("./4_Giant_Squid/input.txt")
 
 
 if __name__ == "__main__":
