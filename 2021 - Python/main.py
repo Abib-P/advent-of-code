@@ -23,6 +23,5 @@ def main():
     the_treachery_of_whales.part_one("./7_The_Treachery_of_Whales/input.txt")
 
 
-
 if __name__ == "__main__":
     main()
