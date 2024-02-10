@@ -3,4 +3,4 @@ Repository des solutions advent of code. Chaque année a été faite dans un lan
 
 ## [2021 - Python](2021%20-%20Python)
 
-## [2023 - Go](2023%20-%20Go/README.md)
+## [2023 - Go](2023%20-%20Go)
